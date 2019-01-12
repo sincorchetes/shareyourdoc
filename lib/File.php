@@ -56,7 +56,6 @@ class File {
     if (empty($idFile)) {
       echo "<h1 class='text-danger'>Insert valid Paste Number</h1>";
     } else {
-    //require_once(__DIR__."/Text.php");
     $fileTryToRead = self::$dirFilesRoot.$idFile;
     if (file_exists($fileTryToRead)) {
       $fileToRead = fopen($fileTryToRead,'r');
@@ -73,7 +72,6 @@ class File {
 
   public static function downloadFile($idFile)
   {
-    //require_once(__DIR__."/Text.php");
     $fileTryToDownload = self::$dirFilesRoot.$idFile;
     $urlConvert = "../files/".$idFile;
 
