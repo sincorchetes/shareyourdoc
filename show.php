@@ -1,8 +1,16 @@
 <!-- 
-  This page was written by Alvaro Castillo 
-  Twitter: @sincorchetes
-  GitHub: @sincorchetes
-  GitLab: @sincorchetes
+/************************************************
+ *  Author: Álvaro Castillo
+ *  
+ *  This library contains third party code.
+ *  For example PHP Markdown class.
+ *  Twitter: @sincorchetes
+ *  GitHub: @sincorchetes
+ *  GitLab: @sincorchetes
+ *
+ *
+ *
+ ************************************************/
 -->
 <?php
   require_once(__DIR__."/lib/File.php");
@@ -21,7 +29,7 @@
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <a class="navbar-brand" href="index.php">Share your doc</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="See more">
         <span class="navbar-toggler-icon"></span>
       </button>
 
@@ -52,15 +60,11 @@
       </div>
     </div>
   </div>
-
-    <!--
-    <form action="<? $_SERVER['PHP_SELF'];?>" method="post">
-      <input type="text" name="readFile">
-      <input type="submit">
-  </form>
--->
-
-
+  <footer class="footer">
+      <div class="container">
+        <span class="text-center text-muted">Share your data is licensed by under GPLv2.0 terms ~ Copyright <a href="https://github.com/sincorchetes" target="_blank">Álvaro Castillo</a></span>
+      </div>
+    </footer>
   </body>
   <!-- jQuery Project JS -->
   <script src="assets/js/jquery-3.3.1.min.js"></script>

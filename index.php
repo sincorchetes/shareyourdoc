@@ -1,8 +1,16 @@
 <!-- 
-  This page was written by Alvaro Castillo 
-  Twitter: @sincorchetes
-  GitHub: @sincorchetes
-  GitLab: @sincorchetes
+/************************************************
+ *  Author: Álvaro Castillo
+ *  
+ *  This library contains third party code.
+ *  For example PHP Markdown class.
+ *  Twitter: @sincorchetes
+ *  GitHub: @sincorchetes
+ *  GitLab: @sincorchetes
+ *
+ *
+ *
+ ************************************************/
 -->
 <!DOCTYPE html>
 <html>
@@ -50,7 +58,6 @@
       <span class="text-center text-muted">Share your data is licensed by under GPLv2.0 terms ~ Copyright <a href="https://github.com/sincorchetes" target="_blank">Álvaro Castillo</a></span>
     </div>
   </footer>
-  </div>
   </body>
   <!-- jQuery Project JS -->
   <script src="assets/js/jquery-3.3.1.min.js"></script>

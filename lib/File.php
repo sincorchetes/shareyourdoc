@@ -50,32 +50,25 @@ class File {
     return $writeFileResults;
   }
 
-  public static function showMarkdownFile($idFile) {
-    require_once(__DIR__."/Text.php");
-    $fileToRead = fopen(self::$dirFilesRoot.$idFile,'r');
-    while ($lineRead = fgets($fileToRead)) {
-      echo Text::textToMarkdown($lineRead);
-    }
-    fclose($fileToRead);
-  }
 
   public static function showFile($idFile)
   {
+    if (empty($idFile)) {
+      echo "<h1 class='text-danger'>Insert valid Paste Number</h1>";
+    } else {
     //require_once(__DIR__."/Text.php");
     $fileTryToRead = self::$dirFilesRoot.$idFile;
-    if (file_exists($fileTryToRead))
-    {
+    if (file_exists($fileTryToRead)) {
       $fileToRead = fopen($fileTryToRead,'r');
       while ($lineRead = fgets($fileToRead)) {
       echo $lineRead;
     }
     fclose($fileToRead);
 
-    }else
-    {
+    } else {
       echo "<h1 class='text-danger'>Error 404 File Not Found</h1>";
+      }
     }
-
   }
 
   public static function downloadFile($idFile)
@@ -84,17 +77,11 @@ class File {
     $fileTryToDownload = self::$dirFilesRoot.$idFile;
     $urlConvert = "../files/".$idFile;
 
-    if (file_exists($fileTryToDownload))
-    {
+    if (file_exists($fileTryToDownload)) {
       echo $idFile;
-    }else
-    {
+    } else {
       echo "File not exists";
     }
-
   }
-
 }
-
-
 ?>
