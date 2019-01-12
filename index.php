@@ -1,23 +1,61 @@
-<!-- This page was written by Alvaro Castillo <sincorchetes <at> gmail <dot> com -->
-  <!DOCTYPE html>
+<!-- 
+  This page was written by Alvaro Castillo 
+  Twitter: @sincorchetes
+  GitHub: @sincorchetes
+  GitLab: @sincorchetes
+-->
+<!DOCTYPE html>
 <html>
   <head>
+    <!-- Bootstrap project CSS files -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-grid.min.css">
+    <!-- Custom CSS file -->
+    <link rel="stylesheet" href="assets/css/navbar.css">
   </head>
   <body>
-    <h1>Paste your code for share </h1>
-    <form action="proc.php" method="post">
-      <textarea name="code"></textarea>
-      <input type="submit">
-    </form>
-    <h1>Read file...</h1>
-    <form action="<?php $_SERVER['PHP_SELF'];?>" method="post">
-      <input type="text" name="readFile">
-      <input type="submit">
-  </form>
-    <?php 
-    require_once(__DIR__."/lib/File.php");
-      $getCode = $_POST["readFile"];
-      File::showFile($getCode);
-    ?>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="">Share your doc</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+        <form action="show.php" method="post" class="form-inline">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="readFile">
+          <button class="btn btn-primary my-2 my-sm-0" type="submit">Search Your Paste Code</button>
+        </form>
+      </div>
+  </nav>
+    
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 py-5">
+        <h1>Paste your code here! </h1>
+      </div>
+      <div class="col-sm-12">
+        <form action="proc.php" method="post">
+          <div class="form-group">
+            <textarea class="form-control" rows="12" name="code"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary pull-right">Paste</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <span class="text-center text-muted">Share your data is licensed by under GPLv2.0 terms ~ Copyright <a href="https://github.com/sincorchetes" target="_blank">Álvaro Castillo</a></span>
+    </div>
+  </footer>
+  </div>
   </body>
+  <!-- jQuery Project JS -->
+  <script src="assets/js/jquery-3.3.1.min.js"></script>
+  <!-- Bootstrap Project JS files -->
+  <script src="assets/js/bootstrap.min.js"></script>
+  <!-- Custom mine js -->
+  <script src="assets/js/downloadFile.js"></script>
 </html>

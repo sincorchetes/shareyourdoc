@@ -5,8 +5,9 @@
  *  This library contains third party code.
  *  For example PHP Markdown class.
  *  
- *
- *
+ *  Twitter: @sincorchetes
+ *  GitHub: @sincorchetes
+ *  GitLab: @sincorchetes
  *
  ************************************************/
 
@@ -24,6 +25,6 @@ $workFile = File::createFile($getCode);
   </head>
   <body>
     <h1><?php echo $workFile['idFile'];?></h1>
-    <code><?php echo $getCode; ?></code>
+    <code><?php echo nl2br($getCode); ?></code>
   </body>
 </html>

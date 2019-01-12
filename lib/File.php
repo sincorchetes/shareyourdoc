@@ -1,10 +1,12 @@
 <?php
 /************************************************
- *  Author: Álvaro Castillo <sincorchetes <at> gmail <dot> com
+ *  Author: Álvaro Castillo
  *  
  *  This library contains third party code.
  *  For example PHP Markdown class.
- *  
+ *  Twitter: @sincorchetes
+ *  GitHub: @sincorchetes
+ *  GitLab: @sincorchetes
  *
  *
  *
@@ -34,6 +36,7 @@ class File {
   }
 
   public static function createFile($text) {
+    //$textConverted = nl2br($text);
     $serverProject = "http://".$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF'];
     $urlAdapt = str_replace("proc.php",  "files/", $serverProject);
   
@@ -68,6 +71,22 @@ class File {
     }
     fclose($fileToRead);
 
+    }else
+    {
+      echo "<h1 class='text-danger'>Error 404 File Not Found</h1>";
+    }
+
+  }
+
+  public static function downloadFile($idFile)
+  {
+    //require_once(__DIR__."/Text.php");
+    $fileTryToDownload = self::$dirFilesRoot.$idFile;
+    $urlConvert = "../files/".$idFile;
+
+    if (file_exists($fileTryToDownload))
+    {
+      echo $idFile;
     }else
     {
       echo "File not exists";
