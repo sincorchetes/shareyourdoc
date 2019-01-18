@@ -30,7 +30,7 @@
       </button>
 
       <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-        <form action="show.php" method="post" class="form-inline">
+        <form action="show.php" method="get" class="form-inline">
           <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="readFile">
           <button class="btn btn-primary my-2 my-sm-0" type="submit">Search Your Paste Code</button>
         </form>

@@ -14,7 +14,7 @@
 -->
 <?php
   require_once(__DIR__."/lib/File.php");
-  $getCode = @$_POST["readFile"];
+  $getCode = @$_REQUEST["readFile"];
 ?>
 <!DOCTYPE html>
 <html>
@@ -44,10 +44,10 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-12 py-5">
-        <h1>Paste code: <?php echo $_POST["readFile"];?></h1>
+        <h1>Paste code: <?php echo $getCode;?></h1>
       </div>
       <div class="col-sm-12">
-        <div class="text-right"><a href="files/<?php File::downloadFile($getCode);?>">Download RAW</a></div>
+        <div class="text-right"><a href='files/<?php echo $getCode;?>' download>Download RAW</a></div>
       </div>
       <div class="col-sm-12">
         <div class="card">

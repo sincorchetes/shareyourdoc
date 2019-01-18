@@ -14,7 +14,7 @@
 -->
 <?php
   require_once(__DIR__."/lib/File.php");
-  $getCode = @$_POST["readFile"];
+  $getCode = @$_GET["readFile"];
   $getSrc = $_POST['code'];
   $workFile = File::createFile($getSrc);
 
@@ -50,7 +50,7 @@
         <h1>Paste code: <?php echo $workFile['idFile'];?></h1>
       </div>
       <div class="col-sm-12">
-        <div class="text-right"><a href="files/<?php File::downloadFile($getCode);?>">Download RAW</a></div>
+        <div class="text-right"><a href="files/<?php echo $workFile['idFile'];?>" download>Download RAW</a></div>
       </div>
       <div class="col-sm-12">
         <div class="card">
@@ -74,5 +74,5 @@
   <!-- Bootstrap Project JS files -->
   <script src="assets/js/bootstrap.min.js"></script>
   <!-- Custom mine js -->
-  <script src="assets/js/downloadFile.js"></script>
+  <!-- <script src="assets/js/downloadFile.js"></script>-->
 </html>
